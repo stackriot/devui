@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/stackriot/devui/issues"
   },
-  "homepage": "https://github.com/stackriot/devui",
+  "homepage": "https://stackriot.github.io/devui",
   "devDependencies": {
     "@storybook/addon-actions": "^3.0.0",
     "@storybook/addon-info": "^3.0.0",
