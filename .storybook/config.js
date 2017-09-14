@@ -7,7 +7,7 @@ import '../src/presets.js';
 
 setAddon(infoAddon);
 setOptions({
-  name: 'DevUI',
+  name: 'stackriot-ui',
   url: 'https://stackriot.github.io/devui',
   goFullScreen: false,
   showLeftPanel: true,
