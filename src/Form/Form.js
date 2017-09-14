@@ -1,4 +1,4 @@
-import React, { PureComponent, Component } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import JSONSchemaForm from 'react-jsonschema-form';
 import createStyledComponent from '../utils/createStyledComponent';
@@ -8,18 +8,16 @@ import customWidgets from './widgets';
 
 const FormContainer = createStyledComponent(styles, JSONSchemaForm);
 
-export default class Form extends (PureComponent || Component) {
+export default class Form extends Component {
   render() {
     const { widgets, children, submitText, primaryButton, noSubmit, ...rest } = this.props;
     return (
       <FormContainer {...rest} widgets={{ ...customWidgets, ...widgets }}>
-        {
-          noSubmit ? <noscript /> :
-            children ||
-            <Button size="big" primary={primaryButton} theme={rest.theme} type="submit">
-              {submitText || 'Submit'}
-            </Button>
-        }
+        {noSubmit ? <noscript /> : children || (
+                <Button size="big" primary={primaryButton} theme={rest.theme} type="submit">
+                  {submitText || 'Submit'}
+                </Button>
+              )}
       </FormContainer>
     );
   }

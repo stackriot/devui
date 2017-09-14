@@ -1,3 +1,11 @@
+import React from 'react';
+import ReactDom from 'react-dom';
+import DevToolsApp from 'remotedev-app';
+
+import color from './utils/color';
+export const effects = { color };
+export createStyledComponent from './utils/createStyledComponent';
+
 export { default as Container } from './Container';
 export { default as Button } from './Button';
 export { default as ContextMenu } from './ContextMenu';
@@ -11,6 +19,9 @@ export { default as SegmentedControl } from './SegmentedControl';
 export { default as Notification } from './Notification';
 export * from './Toolbar';
 
-import color from './utils/color';
-export const effects = { color };
-export createStyledComponent from './utils/createStyledComponent';
+
+
+ReactDom.render(
+  <DevToolsApp />,
+  document.getElementById('root')
+);

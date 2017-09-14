@@ -1,2 +1,2 @@
-export { style as default } from './default';
-export { style as material } from './material';
+export { default } from './default';
+export { default as material } from './material';

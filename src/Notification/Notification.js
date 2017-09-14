@@ -11,16 +11,19 @@ const NotificationWrapper = createStyledComponent(styles);
 
 export default class Notification extends Component {
   shouldComponentUpdate(nextProps) {
-    return nextProps.children !== this.props.children ||
-      nextProps.type !== this.props.type;
+    return nextProps.children !== this.props.children || nextProps.type !== this.props.type;
   }
 
   getIcon = () => {
     switch (this.props.type) {
-      case 'warning': return <WarningIcon />;
-      case 'error': return <ErrorIcon />;
-      case 'success': return <SuccessIcon />;
-      default: return null;
+      case 'warning':
+        return <WarningIcon />;
+      case 'error':
+        return <ErrorIcon />;
+      case 'success':
+        return <SuccessIcon />;
+      default:
+        return null;
     }
   };
 
@@ -29,9 +32,7 @@ export default class Notification extends Component {
       <NotificationWrapper type={this.props.type} theme={this.props.theme}>
         {this.getIcon()}
         <span>{this.props.children}</span>
-        {this.props.onClose &&
-          <button onClick={this.props.onClose}><CloseIcon /></button>
-        }
+        {this.props.onClose && <button onClick={this.props.onClose}><CloseIcon /></button>}
       </NotificationWrapper>
     );
   }
@@ -44,6 +45,4 @@ Notification.propTypes = {
   theme: PropTypes.object
 };
 
-Notification.defaultProps = {
-  type: 'info'
-};
+Notification.defaultProps = { type: 'info' };

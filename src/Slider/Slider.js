@@ -36,12 +36,10 @@ export default class Slider extends Component {
         theme={theme}
       >
         {label && <label>{label} {sublabel && <span>{sublabel}</span>}</label>}
-        {!withValue ? slider :
-          <ContainerWithValue theme={theme}>
-            {slider}
-            <div>{value}</div>
-          </ContainerWithValue>
-        }
+        {!withValue ? slider : <ContainerWithValue theme={theme}>
+              {slider}
+              <div>{value}</div>
+            </ContainerWithValue>}
       </SliderWrapper>
     );
   }

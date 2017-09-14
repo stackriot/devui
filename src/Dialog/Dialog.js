@@ -1,4 +1,4 @@
-import React, { PureComponent, Component } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import createStyledComponent from '../utils/createStyledComponent';
 import * as styles from './styles';
@@ -7,7 +7,7 @@ import Form from '../Form';
 
 const DialogWrapper = createStyledComponent(styles);
 
-export default class Dialog extends (PureComponent || Component) {
+export default class Dialog extends Component {
   onSubmit = () => {
     if (this.submitButton) this.submitButton.click();
     else this.props.onSubmit();
@@ -72,27 +72,21 @@ export default class Dialog extends (PureComponent || Component) {
                   </Form>
                 )}
           </div>
-          {
-            !noFooter &&
-              (actions
-                ? <div className="mc-dialog--footer">
-                  {submitText ?
-                    [...actions,
-                      <Button key="default-submit" primary onClick={this.onSubmit}>
-                        {submitText}
-                      </Button>
-                    ]
-                    : actions
-                  }
-                  </div>
-                : <div className="mc-dialog--footer">
-                    <Button onClick={onDismiss}>Cancel</Button>
-                    <Button primary onClick={this.onSubmit}>
-                      {submitText || 'Submit'}
-                    </Button>
-                  </div>
-              )
-          }
+          {!noFooter && (actions ? <div className="mc-dialog--footer">
+                  {submitText ? [
+                    ...actions,
+                        (
+                    <Button key="default-submit" primary onClick={this.onSubmit}>
+                            {submitText}
+                          </Button>
+                        )
+                  ] : actions}
+                </div> : <div className="mc-dialog--footer">
+                  <Button onClick={onDismiss}>Cancel</Button>
+                  <Button primary onClick={this.onSubmit}>
+                    {submitText || 'Submit'}
+                  </Button>
+                </div>)}
         </div>
       </DialogWrapper>
     );

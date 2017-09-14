@@ -7,14 +7,22 @@ const SelectWidget = ({ options, multi, ...rest }) => (
   <Select options={options.enumOptions} multiple={multi} {...rest} />
 );
 
-const RangeWidget = ({
-  schema, readonly, autofocus,
-  label, // eslint-disable-line
-  options, // eslint-disable-line
-  formContext, // eslint-disable-line
-  registry, // eslint-disable-line
-  ...rest
-}) => (
+const RangeWidget = (
+  {
+    schema,
+    readonly,
+    autofocus,
+    label,
+    // eslint-disable-line
+    options,
+    // eslint-disable-line
+    formContext,
+    // eslint-disable-line
+    registry,
+    // eslint-disable-line
+    ...rest
+  },
+) => (
   <Slider
     {...rest}
     autoFocus={autofocus}

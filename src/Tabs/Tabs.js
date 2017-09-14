@@ -67,7 +67,7 @@ export default class Tabs extends Component {
     if (!this.SelectedComponent) {
       return (
         <TabsContainer position={this.props.position}>
-          { tabsHeader }
+          {tabsHeader}
         </TabsContainer>
       );
     }
@@ -75,7 +75,7 @@ export default class Tabs extends Component {
     return (
       <TabsContainer position={this.props.position}>
         {tabsHeader}
-        <div><this.SelectedComponent {...(this.selector && this.selector())} /></div>
+        <div><this.SelectedComponent {...this.selector && this.selector()} /></div>
       </TabsContainer>
     );
   }

@@ -1,6 +1,6 @@
 export default {
   scheme: 'ir black',
-  author: 'Timothée Poisot (http://timotheepoisot.fr)',
+  author: 'Timoth\xE9e Poisot (http://timotheepoisot.fr)',
   base00: '#000000',
   base01: '#242422',
   base02: '#484844',

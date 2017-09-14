@@ -8,9 +8,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/zalmoxisus/devui.git"
+    "url": "https://github.com/stackriot/devui.git"
   },
-  "author": "Mihail Diordiev <zalmoxisus@gmail.com> (https://github.com/zalmoxisus)",
+  "author": "Seth Bergman <stackriot@gmail.com> (https://github.com/stackriot)",
   "license": "MIT",
   "scripts": {
     "start": "npm run storybook",
@@ -27,9 +27,9 @@
     "postpublish": "npm run publish-storybook"
   },
   "bugs": {
-    "url": "https://github.com/zalmoxisus/devui/issues"
+    "url": "https://github.com/stackriot/devui/issues"
   },
-  "homepage": "https://github.com/zalmoxisus/devui",
+  "homepage": "https://github.com/stackriot/devui",
   "devDependencies": {
     "@storybook/addon-actions": "^3.0.0",
     "@storybook/addon-info": "^3.0.0",
@@ -47,6 +47,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.16.0",
     "css-loader": "^0.26.0",
+    "electron-devtools-installer": "^2.2.0",
     "enzyme": "^2.8.2",
     "enzyme-to-json": "^1.5.1",
     "eslint": "^2.7.0",
@@ -66,6 +67,8 @@
     "react-addons-test-utils": "^15.5.1",
     "react-dom": "^15.5.4",
     "react-test-renderer": "^15.5.4",
+    "redux-devtools": "^3.4.0",
+    "remote-redux-devtools": "^0.5.12",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
@@ -85,7 +88,9 @@
     "react-icons": "^2.2.5",
     "react-jsonschema-form": "^0.48.2",
     "react-select": "^1.0.0-rc.5",
+    "redux-devtools-extension": "^2.13.2",
     "redux-devtools-themes": "^1.0.0",
+    "remotedev-app": "^0.10.8",
     "simple-element-resize-detector": "^1.1.0",
     "styled-components": "^2.0.0"
   },

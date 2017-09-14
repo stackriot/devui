@@ -7,8 +7,7 @@ const SegmentedWrapper = createStyledComponent(styles);
 
 export default class SegmentedControl extends Component {
   shouldComponentUpdate(nextProps) {
-    return nextProps.disabled !== this.props.disabled ||
-      nextProps.selected !== this.props.selected;
+    return nextProps.disabled !== this.props.disabled || nextProps.selected !== this.props.selected;
   }
 
   onClick = e => {
@@ -24,16 +23,16 @@ export default class SegmentedControl extends Component {
     return (
       <SegmentedWrapper disabled={this.props.disabled} theme={this.props.theme}>
         {values.map(button => (
-          <button
-            key={button}
-            value={button}
-            data-selected={button === selected ? true : undefined}
-            onMouseUp={this.onMouseUp}
-            onClick={this.onClick}
-          >
-            {button}
-          </button>
-        ))}
+            <button
+              key={button}
+              value={button}
+              data-selected={button === selected ? true : undefined}
+              onMouseUp={this.onMouseUp}
+              onClick={this.onClick}
+            >
+              {button}
+            </button>
+          ))}
       </SegmentedWrapper>
     );
   }
