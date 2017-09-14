@@ -8,9 +8,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/zalmoxisus/devui.git"
+    "url": "https://github.com/stackriot/devui.git"
   },
-  "author": "Mihail Diordiev <zalmoxisus@gmail.com> (https://github.com/zalmoxisus)",
+  "author": "Seth Bergman <stackriot@gmail.com> (https://github.com/stackriot)",
   "license": "MIT",
   "scripts": {
     "start": "npm run storybook",
@@ -27,9 +27,9 @@
     "postpublish": "npm run publish-storybook"
   },
   "bugs": {
-    "url": "https://github.com/zalmoxisus/devui/issues"
+    "url": "https://github.com/stackriot/devui/issues"
   },
-  "homepage": "https://github.com/zalmoxisus/devui",
+  "homepage": "https://github.com/stackriot/devui",
   "devDependencies": {
     "@storybook/addon-actions": "^3.0.0",
     "@storybook/addon-info": "^3.0.0",
