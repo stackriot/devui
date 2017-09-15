@@ -17,7 +17,7 @@ const Container = styled.div`
 storiesOf('Tabs', module)
   .addDecorator(withKnobs)
   .addWithInfo(
-    'default',
+    'material',
     '',
     () => (
       <Container><Tabs
