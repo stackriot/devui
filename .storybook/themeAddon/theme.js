@@ -8,7 +8,7 @@ const ContainerStyled = styled(Container)`
   > div {
     height: 100%;
     width: 100%;
-      
+
     > div {
       height: 100%;
       width: 100%;
@@ -21,8 +21,8 @@ const channel = addons.getChannel();
 
 export const defaultState = {
   theme: 'default',
-  scheme: 'default',
-  light: true
+  scheme: 'atomOneDark',
+  light: false
 };
 
 class Theme extends React.Component {
@@ -39,7 +39,7 @@ class Theme extends React.Component {
   onChannel = state => {
     this.setState(state);
   };
-  
+
   render() {
     return (
       <ContainerStyled themeData={this.state}>
