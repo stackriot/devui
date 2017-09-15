@@ -4,7 +4,10 @@
   "description": "Reusable React components for building DevTools monitors and apps.",
   "files": [
     "lib",
-    "fonts"
+    "fonts",
+    ".storybook",
+    ".scripts",
+    "static"
   ],
   "repository": {
     "type": "git",
